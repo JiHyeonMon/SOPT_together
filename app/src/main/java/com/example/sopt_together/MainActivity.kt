@@ -34,10 +34,7 @@ class MainActivity : AppCompatActivity() {
             when(it.itemId){
 
                 R.id.menu_store -> main_viewPager.currentItem = 0
-                R.id.menu_class -> main_viewPager.currentItem = 1
-                R.id.menu_search -> main_viewPager.currentItem = 2
                 R.id.menu_category -> main_viewPager.currentItem = 3
-                R.id.menu_user -> main_viewPager.currentItem = 4
             }
             true
         }
