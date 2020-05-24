@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SOPT_together</string>
+
+    <string name="hello_blank_fragment">빈 프레그먼트</string>
 </resources>
