@@ -35,6 +35,7 @@ class MainActivity : AppCompatActivity() {
 
                 R.id.menu_store -> main_viewPager.currentItem = 0
                 R.id.menu_category -> main_viewPager.currentItem = 3
+//                지현 수정
             }
             true
         }
