@@ -11,6 +11,7 @@ class CategoryFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
+    //하이하이
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
