@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CategoryFragment">
+    tools:context=".fragment.category.CategoryFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -24,7 +24,8 @@
                     android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
+                    android:textColor="#111111"
+                    android:textStyle="bold"
                     android:text="카테고리"
                     android:layout_marginTop="36dp"
                     android:layout_marginLeft="20dp"
@@ -46,12 +47,12 @@
                 <com.google.android.material.tabs.TabItem
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Monday" />
+                    android:text="작품" />
 
                 <com.google.android.material.tabs.TabItem
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tuesday" />
+                    android:text="클래스" />
 
             </com.google.android.material.tabs.TabLayout>
         </LinearLayout>
