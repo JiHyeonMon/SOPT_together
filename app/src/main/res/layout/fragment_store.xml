@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.fragment.store.StoreFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -40,7 +39,9 @@
                 android:id="@+id/tab_store"
                 app:tabMode="scrollable"
                 android:layout_width="match_parent"
+                app:tabIndicatorColor="#dc3c2e"
                 android:layout_height="42dp">
+
                 <com.google.android.material.tabs.TabItem
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -72,13 +73,16 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="14dp">
 
+
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rv_banner"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:orientation="horizontal"
+                    android:scaleType="fitXY"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     tools:listitem="@layout/store_rv_banner_data" />
+
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="46dp"
@@ -126,17 +130,18 @@
                 android:layout_marginBottom="10dp"
                 />
 
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_recommendation"
                 android:layout_width="match_parent"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 android:orientation="horizontal"
-                android:layout_height="105dp"
+                android:scaleType="fitXY"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
+                android:layout_height="105dp"
                 android:scrollbars="horizontal"
                 tools:listitem="@layout/store_rv_recommend_data"/>
-
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

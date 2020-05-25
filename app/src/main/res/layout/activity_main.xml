@@ -16,6 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:background="@color/white"
+        app:itemIconSize="55dp"
         app:menu="@menu/navigation"/>
 
     <androidx.viewpager.widget.ViewPager
