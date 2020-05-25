@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="105dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="0dp"
+        >
+
+    <ImageView
+        android:id="@+id/img_recommend"
+        android:layout_width="match_parent"
+        android:scaleType="fitXY"
+        android:layout_height="match_parent"
+        android:src="@drawable/recommendation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_dim"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:scaleType="fitXY"
+            android:layout_gravity="bottom"
+            app:srcCompat="@android:drawable/screen_background_dark_transparent" />
+
+        <TextView
+            android:id="@+id/txt_recommand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="7dp"
+            android:lineSpacingExtra="5sp"
+            android:textColor="#ffffff"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_gravity="bottom"
+            tools:text="[한정세트] 오직 널 위해 담은 뚱카롱" />
+
+    <Button
+        android:id="@+id/btn_star"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:layout_marginRight="38dp"
+        android:layout_marginBottom="7dp"
+        android:background="@drawable/ic_star_white"
+        android:layout_gravity="bottom|right"/>
+
+    <TextView
+        android:id="@+id/txt_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="5sp"
+        android:textColor="#ffffff"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="7dp"
+        android:layout_marginRight="16dp"
+        tools:text="4.7"
+        android:layout_gravity="bottom|right"/>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
