@@ -5,12 +5,14 @@ import android.os.Bundle
 import androidx.viewpager.widget.ViewPager
 import com.example.sopt_together.R
 import kotlinx.android.synthetic.main.activity_main.*
+import java.text.DecimalFormat
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
 
         main_viewPager.adapter =
             MainPagerAdapter(
