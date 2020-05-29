@@ -141,7 +141,33 @@
                 android:layout_height="105dp"
                 android:scrollbars="horizontal"
                 tools:listitem="@layout/store_rv_recommend_data"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="#272727"
+                android:lineSpacingExtra="6sp"
+                android:text="인기 키워드"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="18dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_keyword"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:orientation="vertical"
+                    android:clipToPadding="false"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    android:layout_marginHorizontal="20dp"
+                    app:spanCount="2"
+                    tools:listitem="@layout/store_rv_keyword_data" />
 
+            </FrameLayout>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
