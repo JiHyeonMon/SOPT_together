@@ -98,12 +98,12 @@ class StoreFragment : Fragment() {
     val runnableCode =
         Runnable {
             if(i>0) {
-                rv_banner.scrollToPosition(bannerAdapter.itemCount - i)
+                rv_banner.smoothScrollToPosition(bannerAdapter.itemCount - i)
                 txt_page.text = (bannerAdapter.itemCount - i + 1).toString()
                 i--
                 }else{
                 i=8
-                rv_banner.scrollToPosition(bannerAdapter.itemCount - i)
+                rv_banner.smoothScrollToPosition(bannerAdapter.itemCount - i)
                 txt_page.text = (bannerAdapter.itemCount - i + 1).toString()
             }
             onResume()
