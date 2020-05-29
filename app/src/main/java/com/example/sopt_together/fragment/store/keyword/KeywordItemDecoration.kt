@@ -13,7 +13,7 @@ class KeywordItemDecoration(private val spaceHeight: Int): RecyclerView.ItemDeco
     ) {
         with(outRect) {
             if (parent.getChildAdapterPosition(view) == 0 || parent.getChildAdapterPosition(view) == 1) {
-                top = spaceHeight
+                top = 0
             }
             left =  spaceHeight
             right = spaceHeight

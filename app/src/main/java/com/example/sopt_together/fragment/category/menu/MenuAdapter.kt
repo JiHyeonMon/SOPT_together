@@ -13,6 +13,7 @@ class MenuAdapter(private val context : Context): RecyclerView.Adapter<RecyclerV
     var datas = mutableListOf<MenuData>()
 
     override fun getItemViewType(position: Int): Int {
+
         return if(position%8 == 7) TYPE_ADD else TYPE_MENU
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {

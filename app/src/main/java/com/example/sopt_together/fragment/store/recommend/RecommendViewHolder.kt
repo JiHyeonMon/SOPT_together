@@ -13,7 +13,7 @@ class RecommendViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView){
     val img_recommend = itemView.findViewById<ImageView>(R.id.img_recommend)
     val txt_recommand = itemView.findViewById<TextView>(R.id.txt_recommand)
     val txt_rating = itemView.findViewById<TextView>(R.id.txt_rating)
-    val star = itemView.findViewById<Button>(R.id.btn_star)
+    var star = itemView.findViewById<Button>(R.id.btn_star)
 
     fun bind(recommendData: RecommendData) {
         if(recommendData.img_recommend.isBlank()){
@@ -23,9 +23,20 @@ class RecommendViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView){
         }
         txt_recommand.text = recommendData.txt_recommand
         txt_rating.text = recommendData.txt_rating
+
         if(recommendData.star){
             star.setBackgroundResource(R.drawable.ic_star_red)
         }else
             star.setBackgroundResource(R.drawable.ic_star_white)
+
+        star.setOnClickListener {
+            if(recommendData.star){
+                star.setBackgroundResource(R.drawable.ic_star_white)
+                recommendData.star = false
+            }else {
+                star.setBackgroundResource(R.drawable.ic_star_red)
+                recommendData.star = true
+            }
+        }
     }
 }

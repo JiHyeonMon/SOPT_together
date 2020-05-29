@@ -123,6 +123,7 @@
                 android:textSize="18sp"
                 android:textColor="#272727"
                 android:lineSpacingExtra="6sp"
+                android:textStyle="bold"
                 android:text="실시간 추천 작품"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="18dp"
@@ -137,7 +138,6 @@
                 android:orientation="horizontal"
                 android:scaleType="fitXY"
                 android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
                 android:layout_height="105dp"
                 android:scrollbars="horizontal"
                 tools:listitem="@layout/store_rv_recommend_data"/>
@@ -155,15 +155,16 @@
                 />
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp">
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                >
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rv_keyword"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:clipToPadding="false"
                     app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                    android:layout_marginHorizontal="20dp"
                     app:spanCount="2"
                     tools:listitem="@layout/store_rv_keyword_data" />
 
