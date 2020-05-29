@@ -24,21 +24,23 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.cardview.widget.CardView>
+
     <TextView
         android:id="@+id/txt_banner_main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="19dp"
+        android:letterSpacing="-0.03"
+        android:lineHeight="24sp"
+        android:lineSpacingExtra="6sp"
         android:text="ddfadsf"
+        android:textColor="#dc3c2e"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="19dp"
-        android:layout_marginLeft="26dp"
-        android:textSize="18sp"
-        android:lineHeight="24sp"
-        android:textColor="#dc3c2e"
-        android:letterSpacing="-0.03"
-        android:lineSpacingExtra="6sp"
-        tools:text="NEW!\n놓치기 아까운\n입점할인"/>
+        tools:text="NEW!\n놓치기 아까운\n입점할인" />
 
     <TextView
         android:id="@+id/txt_banner_tag"

@@ -16,7 +16,6 @@ import com.example.sopt_together.R
 import com.example.sopt_together.ui.fragment.store.banner.BannerAdapter
 import com.example.sopt_together.ui.fragment.store.banner.BannerData
 import com.example.sopt_together.ui.fragment.store.banner.BannerDummy
-import com.example.sopt_together.ui.fragment.store.banner.BannerViewHolder
 import com.example.sopt_together.ui.fragment.store.recommend.RecommendAdapter
 import com.example.sopt_together.ui.fragment.store.recommend.RecommendData
 import com.example.sopt_together.ui.fragment.store.recommend.RecommendDummy
@@ -30,26 +29,6 @@ class StoreFragment : Fragment() {
     lateinit var recommandAdapter: RecommendAdapter
 
     val handler = Handler()
-
-    var i = 3
-
-    val runnableCode =
-        Runnable {
-            if(i>0) {
-//                var page = txt_page.text.toString().toInt()
-
-                rv_banner.scrollToPosition(bannerAdapter.itemCount - i)
-//                rv_banner.scrollToPosition(page)
-
-                Log.d("page", (bannerAdapter.itemCount - i).toString())
-                txt_page.text = (bannerAdapter.itemCount - i + 1).toString()
-
-                i--
-            }else{
-                i=3
-            }
-            onResume()
-        }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -81,9 +60,7 @@ class StoreFragment : Fragment() {
         rv_banner.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
                 super.onScrollStateChanged(recyclerView, newState)
-
                 txt_page.text = ((rv_banner.layoutManager as LinearLayoutManager).findFirstVisibleItemPosition()+1).toString()
-
             }
         })
 
@@ -97,11 +74,39 @@ class StoreFragment : Fragment() {
         val snapHelper_reco = PagerSnapHelper()
         snapHelper_reco.attachToRecyclerView(rv_recommendation)
 
+//        btn_star.setOnClickListener {
+//            if(recommandAdapter.datas[].star)
+//        }
+
     }
 
+    var i = 8
+
+    //계속 돌아가는 코드, 자동으로 recyclerview 넘기기.
+    val runnableCode =
+        Runnable {
+            if(i>0) {
+                rv_banner.scrollToPosition(bannerAdapter.itemCount - i)
+                txt_page.text = (bannerAdapter.itemCount - i + 1).toString()
+                i--
+                }else{
+                i=8
+                rv_banner.scrollToPosition(bannerAdapter.itemCount - i)
+                txt_page.text = (bannerAdapter.itemCount - i + 1).toString()
+            }
+            onResume()
+        }
+
+    //onResume을 통해 runnableCode반복 수행
     override fun onResume() {
         super.onResume()
         handler.postDelayed(runnableCode,4000)
     }
 }
+
+
+
+
+
+
 

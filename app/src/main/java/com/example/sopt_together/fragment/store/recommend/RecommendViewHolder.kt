@@ -16,7 +16,11 @@ class RecommendViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView){
     val star = itemView.findViewById<Button>(R.id.btn_star)
 
     fun bind(recommendData: RecommendData) {
-        //Glide.with(itemView).load(recommendData.img_recommend).into(img_recommend)
+        if(recommendData.img_recommend.isBlank()){
+            img_recommend.setImageResource(R.drawable.recommendation)
+        }else {
+            Glide.with(itemView).load(recommendData.img_recommend).into(img_recommend)
+        }
         txt_recommand.text = recommendData.txt_recommand
         txt_rating.text = recommendData.txt_rating
         if(recommendData.star){

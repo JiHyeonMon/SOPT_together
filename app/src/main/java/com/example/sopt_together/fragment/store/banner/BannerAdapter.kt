@@ -1,13 +1,10 @@
 package com.example.sopt_together.ui.fragment.store.banner
 
 import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sopt_together.R
-import kotlinx.android.synthetic.main.fragment_store.view.*
-import java.text.ParsePosition
 
 class BannerAdapter(private val context : Context) : RecyclerView.Adapter<BannerViewHolder>() {
 

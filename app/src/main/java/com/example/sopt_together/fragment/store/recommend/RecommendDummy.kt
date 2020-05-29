@@ -10,14 +10,14 @@ internal class RecommendDummy {
                 txt_rating = "4.6"
             ),
             RecommendData(
-                img_recommend = "",
-                txt_recommand = "[두번째] 맛있는 음식",
+                img_recommend = "https://cdn.pixabay.com/photo/2016/12/06/15/26/christmas-cookies-1886760_1280.jpg",
+                txt_recommand = "[쿠키세트] 쵹쵹한 별모양 쿠키",
                 star = false,
                 txt_rating = "3.3"
             ),
             RecommendData(
-                img_recommend = "",
-                txt_recommand = "[333] ㅁㄴㅇㄻㄴㅇㄹ",
+                img_recommend = "https://cdn.pixabay.com/photo/2013/02/21/19/06/beach-84533_1280.jpg",
+                txt_recommand = "[여름] 여름여름",
                 star = false,
                 txt_rating = "1.2"
             )
