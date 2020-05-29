@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.GridLayoutManager
 
 import com.example.sopt_together.R
 import com.example.sopt_together.fragment.category.age.AgeAdapter
@@ -12,6 +14,9 @@ import com.example.sopt_together.fragment.category.age.AgeData
 import com.example.sopt_together.fragment.category.keyword.KeywordAdapter
 import com.example.sopt_together.fragment.category.keyword.KeywordAdapter2
 import com.example.sopt_together.fragment.category.keyword.KeywordData
+import com.example.sopt_together.fragment.category.menu.MenuAdapter
+import com.example.sopt_together.fragment.category.menu.MenuData
+import com.example.sopt_together.fragment.category.menu.MenuDummy
 import kotlinx.android.synthetic.main.fragment_works.*
 import java.text.DecimalFormat
 
@@ -20,7 +25,7 @@ class WorksFragment : Fragment() {
     lateinit var keywordAdapter: KeywordAdapter
     lateinit var keywordAdapter2: KeywordAdapter2
     lateinit var ageAdapter: AgeAdapter
-
+    lateinit var menuAdapter: MenuAdapter
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -46,6 +51,15 @@ class WorksFragment : Fragment() {
         ageAdapter.datas = mutableListOf<AgeData>()
         rv_age.adapter = ageAdapter
         loadDatas3()
+
+        rv_menu.layoutManager = GridLayoutManager(this.context, 4)
+        rv_menu.addItemDecoration(DividerItemDecoration(rv_menu.context, DividerItemDecoration.HORIZONTAL))
+        rv_menu.addItemDecoration(DividerItemDecoration(rv_menu.context, DividerItemDecoration.VERTICAL))
+
+        menuAdapter = MenuAdapter(view.context)
+        menuAdapter.datas = MenuDummy().menuList() as MutableList<MenuData>
+        menuAdapter.notifyDataSetChanged()
+        rv_menu.adapter = menuAdapter
     }
 
 

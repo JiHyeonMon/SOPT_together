@@ -7,8 +7,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import com.example.sopt_together.R
+import com.example.sopt_together.fragment.store.keyword.KeywordAdapter
+import com.example.sopt_together.fragment.store.keyword.KeywordData
+import com.example.sopt_together.fragment.store.keyword.KeywordDummy
+import com.example.sopt_together.fragment.store.keyword.KeywordItemDecoration
 import com.example.sopt_together.ui.fragment.store.banner.BannerAdapter
 import com.example.sopt_together.ui.fragment.store.banner.BannerData
 import com.example.sopt_together.ui.fragment.store.banner.BannerDummy
@@ -22,6 +27,7 @@ class StoreFragment : Fragment() {
 
     lateinit var bannerAdapter: BannerAdapter
     lateinit var recommandAdapter: RecommendAdapter
+    lateinit var keywordAdapater : KeywordAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -49,6 +55,15 @@ class StoreFragment : Fragment() {
         //사진 하나가 온전히 다 뜨기 고정
         val snapHelper_reco = PagerSnapHelper()
         snapHelper_reco.attachToRecyclerView(rv_recommendation)
+
+        rv_keyword.layoutManager = GridLayoutManager(this.context, 2)
+        rv_keyword.addItemDecoration(KeywordItemDecoration(14))
+        keywordAdapater = KeywordAdapter(view.context)
+        keywordAdapater.datas = KeywordDummy().keywordList() as MutableList<KeywordData>
+        rv_keyword.adapter = keywordAdapater
+        val snapHelper_keyword = PagerSnapHelper()
+        snapHelper_keyword.attachToRecyclerView(rv_keyword)
+
 
     }
 

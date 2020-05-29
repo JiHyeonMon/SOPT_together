@@ -51,7 +51,10 @@
             <androidx.viewpager.widget.ViewPager
                 android:id="@+id/viewpager_category"
                 android:layout_width="match_parent"
-                android:layout_height="600dp" />
+                android:layout_height="600dp">
+
+            </androidx.viewpager.widget.ViewPager>
+
         </LinearLayout>
     </ScrollView>
 
